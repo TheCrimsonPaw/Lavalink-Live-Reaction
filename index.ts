@@ -31,7 +31,7 @@ async function main() {
     });
    
     client.on('ready', async () => {
-        console.log("Bot is ready!");
+        console.log("Bot is ready sir.");
         vulkava.start(client.user.id);
         let cl = await si.currentLoad();
         setInterval(async () => {
@@ -69,7 +69,7 @@ Uptime : ${moment(node.stats.uptime).format(
                     { name: "**RAM**", value: `\`\`\`nim\nAvailable: ${pretty(memdata.total)}\nMemory Used: ${pretty(memdata.active)}\`\`\``, inline: true },
                     { name: "**DISK**", value: `\`\`\`nim\nDisk Used: ${pretty(diskdata[0].size)} / ${pretty(diskdata[0].used)}\`\`\``, inline: true },
                     { name: "**NETWORK**", value: `\`\`\`nim\nPing: ${Math.round(netdata[0].ms)}ms\nUp: ${pretty(netdata[0].tx_sec)}/s\nDown: ${pretty(netdata[0].rx_sec)}/s\n\nTotal Up: ${pretty(netdata[0].tx_bytes)}\nTotal Down: ${pretty(netdata[0].rx_bytes)}\`\`\`` },
-                    { name: "**Discord API websocket ping**", value: `\`\`\`nim\n${Math.round(client.ws.ping)}ms\`\`\``, inline: true },
+                    { name: "**Discord API Websocket Ping**", value: `\`\`\`nim\n${Math.round(client.ws.ping)}ms\`\`\``, inline: true },
                     { name: "**Uptime**", value: `\`\`\`nim\n${uptimer(uptime)}\`\`\``, inline: true }
                 ]
             } as any;
